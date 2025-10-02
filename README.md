@@ -6,6 +6,8 @@
 
 ### A personal experiment that grew out of my frustration with another project.
 
+### Unfinished. Chat works, but not the game. Soon.
+
 # Technology Stack
 
 1. Nginx
