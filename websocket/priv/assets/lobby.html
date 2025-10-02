@@ -1,0 +1,381 @@
+<!doctype html>
+
+
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+
+    <title>Social-Pique.</title>
+
+    <!-- <link rel="stylesheet" type="text/css" href=""> -->
+
+    <style type="text/css">
+
+      @font-face {
+        font-family: "dpcali";
+        src: url("/assets/dpcali.woff");
+      }
+
+      @font-face {
+        font-family: "lemonmilk";
+        src: url("/assets/LEMONMILK-Regular.woff");
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        box-sizing: border-box;
+        font-family: Georgia;
+      }
+
+      body {
+        /*background-color: rgba(22.2, 62.1, 87.2, 1);*/
+        background-color: #FFFFFF;
+        font-family: "Georgia", "Helvetica", "Arial", sans-serif;
+      }
+
+      h1 {
+        font-family: Georgia;
+
+      }
+
+      .shadow {
+        text-shadow: 2px 2px 2px #000;
+      }
+
+      /*
+
+        /admin
+
+        'Special' directives for Administrative interface.
+
+      */
+
+      .b-adminbtn { border: 5px solid #CCC; }
+
+      /*
+
+        End /admin.
+
+      */
+
+      .ff-serif { font-family: serif; }
+      .d-block { display: block; }
+      .d-flex { display: flex; }
+      .fd-column { flex-direction: column; }
+      .fd-row { flex-direction: row; }
+      .fw-wrap { flex-wrap: wrap; }
+      .jc-space-between { justify-content: space-between; }
+      .jc-center { justify-content: center; }
+      .jc-space-around { justify-content: space-around; }
+      .jc-flex-start { justify-content: flex-start; }
+      .jc-flex-end { justify-content: flex-end; }
+      .ai-center { align-items: center; }
+      .ai-flex-start { align-items: flex-start; }
+      .as-flex-start { align-self: flex-start; }
+      .as-center { align-self: center; }
+      .rg-0    { row-gap: 0; }
+      .rg-half { row-gap: 0.5rem; }
+      .rg-1    { row-gap: 1.0rem; }
+      .rg-1-5  { row-gap: 1.5rem; }
+      .rg-2    { row-gap: 2rem; }
+      .cg-half { column-gap: 0.5rem; }
+      .cg-1 { column-gap: 1.0rem; }
+      .cg-1-5 { column-gap: 1.5rem; }
+      .fg-1 { flex-grow: 1; }
+      .pa-quarter { padding: 0.25rem; }
+      .pa-half { padding: 0.5rem; }
+      .pa-1 { padding: 1rem; }
+      .pa-1-5 { padding: 1.5rem; }
+      .pa-2 { padding: 2rem; }
+      .pl-2 { padding-left: 2rem; }
+      .pl-3 { padding-left: 3rem; }
+      .pl-4 { padding-left: 4rem; }
+      .pv-half { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+      .pv-quarter { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+      .pv-1 { padding-top: 1rem; padding-bottom: 1rem; }
+      .pv-2 { padding-top: 2rem; padding-bottom: 2rem; }
+      .ph-1 { padding-left: 1rem; padding-right: 1rem; }
+      .ph-half { padding-left: 0.5rem; padding-right: 0.5rem; }
+      .ph-quarter { padding-left: 0.25rem; padding-right: 0.25rem; }
+      .pb-1 { padding-bottom: 1rem; }
+      .pb-half { padding-bottom: 0.5rem; }
+      .pt-half { padding-top: 0.5rem; }
+      .pt-1 { padding-top: 1rem; }
+
+      .mb-1 { margin-bottom: 1rem; }
+      .ml-1 { margin-left: 1rem; }
+      .mv-1 { margin-top: 1rem; margin-bottom: 1rem; }
+      .mv-half { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+
+      .ta-left { text-align: left; }
+      .ta-center { text-align: center; }
+      .ta-right { text-align: right; }
+
+      .td-none { text-decoration: none; }
+
+      .m-auto { margin: auto; }
+      .w-18 { width: 18%; }
+      .w-20 { width: 20%; }
+      .w-25 { width: 25%; }
+      .w-30 { width: 30%; }
+      .w-30 { width: 30%; }
+      .w-30 { width: 30%; }
+      .w-33 { width: 33%; }
+      .w-34 { width: 34%; }
+      .w-35 { width: 35%; }
+      .w-30 { width: 30%; }
+      .w-30 { width: 30%; }
+      .w-30 { width: 30%; }
+      .w-39 { width: 39%; }
+      .w-40 { width: 40%; }
+      .w-41 { width: 41%; }
+      .w-42 { width: 42%; }
+      .w-43 { width: 43%; }
+      .w-44 { width: 44%; }
+      .w-45 { width: 45%; }
+      .w-46 { width: 46%; }
+      .w-47 { width: 47%; }
+      .w-48 { width: 48%; }
+      .w-49 { width: 49%; }
+      .w-50 { width: 50%; }
+      .w-60 { width: 60%; }
+      .w-65 { width: 65%; }
+      .w-70 { width: 70%; }
+      .w-80 { width: 80%; }
+      .w-90 { width: 90%; }
+      .w-95 { width: 95%; }
+      .w-100 { width: 100%; }
+      .w-auto { width: auto; }
+
+      .h-100 { height: 100%; }
+
+      .lh-1 { line-height: 1rem; }
+      .lh-1-1 { line-height: 1.1rem; }
+      .lh-1-2 { line-height: 1.2rem; }
+      .lh-1-3 { line-height: 1.3rem; }
+      .lh-1-4 { line-height: 1.4rem; }
+      .lh-1-5 { line-height: 1.5rem; }
+      .lh-1-6 { line-height: 1.6rem; }
+      .lh-1-7 { line-height: 1.7rem; }
+      .lh-1-8 { line-height: 1.8rem; }
+      .lh-1-9 { line-height: 1.9rem; }
+      .lh-2 { line-height: 2rem; }
+
+      .bgc-red { background-color: red; }
+      .bgc-lightred { background-color: #ffcccb; }
+      .bgc-green { background-color: green; }
+      .bgc-lightgreen { background-color: lightgreen; }
+      .bgc-lightblue { background-color: lightblue; }
+      .bgc-black { background-color: black; }
+      .bgc-yellow { background-color: yellow; }
+      .bgc-lightyellow { background-color: lightyellow; }
+      .bgc-purple { background-color: purple; }
+      .bgc-white { background-color: white; }
+      .bgc-snow { background-color: #F2F2F2; }
+      .bgc-snow2 { background-color: #F0F0F0; }
+      .bgc-333 { background-color: #333; }
+      .bgc-ccc { background-color: #CCC; }
+      .bgc-cornflowerblue { background-color: #6495ed; }
+
+
+      .c-white { color: white; }
+      .c-yellow { color: yellow; }
+      .c-red { color: red; }
+      .c-black { color: black; }
+      .c-green { color: green; }
+      .c-blue { color: blue; }
+      .c-333 { color: #333; }
+      .c-444 { color: #444; }
+      .c-555 { color: #555; }
+      .c-666 { color: #666; }
+      .c-999 { color: #999; }
+      .c-redpink { color: #ff2500; }
+      .c-tiredorange { color: #f5a80d; }
+
+      .hidden { display: none; }
+      .fw-bold { font-weight: bold; }
+
+      .fs-0-8 { font-size: 0.8rem; }
+      .fs-0-9 { font-size: 0.9rem; }
+      .fs-1 { font-size: 1rem; }
+      .fs-1-1 { font-size: 1.1rem; }
+      .fs-1-2 { font-size: 1.2rem; }
+      .fs-1-3 { font-size: 1.3rem; }
+      .fs-1-4 { font-size: 1.4rem; }
+      .fs-1-5 { font-size: 1.5rem; }
+      .fs-2 { font-size: 2rem; }
+      .fs-2-1 { font-size: 2.1rem; }
+      .fs-2-2 { font-size: 2.2rem; }
+      .fs-2-3 { font-size: 2.3rem; }
+      .fs-2-4 { font-size: 2.4rem; }
+      .fs-2-5 { font-size: 2.5rem; }
+      .fs-2-7 { font-size: 2.7rem; }
+
+
+      .fs-3 { font-size: 3rem; }
+      .fs-3-1 { font-size: 3.1rem; }
+      .fs-3-2 { font-size: 3.2rem; }
+      .fs-3-3 { font-size: 3.3rem; }
+      .fs-3-5 { font-size: 3.5rem; }
+      .fs-4 { font-size: 4rem; }
+      .fs-5 { font-size: 5rem; }
+
+
+      .bt-2pxsolidblack { border-top: 2px solid #000000; }
+      .custom-bt { border-top: 1px solid black; border-bottom: 1px solid black; }
+      .dhl-2 { border-top: 2px dotted #666; }
+
+      .pl-1 { padding-left: 1rem; }
+
+      .bgc-deep-purple { background-color: #5b055d; }
+
+      .highlight:hover {
+        background-color: yellow;
+        cursor: pointer;
+      }
+
+      .c-pointer { cursor: pointer; }
+
+      .br-0 { border-radius: 0px; }
+      .br-1 { border-radius: 1px; }
+      .br-2 { border-radius: 2px; }
+      .br-3 { border-radius: 3px; }
+      .br-4 { border-radius: 4px; }
+      .br-5 { border-radius: 5px; }
+      .br-10 { border-radius: 10px; }
+      .br-15 { border-radius: 15px; }
+      .br-20 { border-radius: 20px; }
+      .br-25 { border-radius: 25px; }
+      .br-30 { border-radius: 30px; }
+
+      .bb-1-ccc { border-bottom: 1px solid #CCC; }
+
+      .mt-half { margin-top: 0.5rem; }
+      .mt-1 { margin-top: 1rem; }
+
+
+         .btn-grad {background-image: linear-gradient(to right, #fe8c00 0%, #f83600  51%, #fe8c00  100%)}
+         .btn-grad {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 3px;
+            display: block;
+            font-size: 2rem;
+            font-family: 'lemonmilk';
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      .container {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*background-color: white;*/
+      }.btn {
+        padding: 20px 60px;
+        border: none;
+        outline: none;
+        position: relative;
+        z-index: 1;
+        border-radius: 5px;
+        background: linear-gradient(to right, #00FFA3, #DC1FFF);
+        cursor: pointer;
+      }.btn::before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        right: 2px;
+        top: 2px;
+        bottom: 2px;
+        border-radius: 3px;
+        background-color: #444;
+        z-index: -1;
+        transition: 200ms
+      }.btn::after {
+        content: attr(data);
+        font-size: 2.5rem;
+        font-family: 'lemonmilk';
+        font-weight: bold;
+        background: linear-gradient(to left, #00FFA3, #DC1FFF);
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: 200ms
+      }.btn:hover::before {
+        opacity: 50%;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+      }.btn:hover::after{
+        color: #FFF;
+        text-shadow: 2px 2px 2px #000;
+      }
+
+
+      @media (0px <= width <= 1200px) {
+
+        .mq { color: blue; }
+
+      }
+
+      @media (width >= 1200px) {
+
+        .mq { color: mintcream; }
+
+      }
+    </style>
+
+    <script src=""></script>
+
+      <script src="/assets/vue.min.js"></script>
+      <script src="/assets/jquery.min.js"></script>
+  </head>
+
+  <body style="xheight: 100vh; " class="bgc-black">
+    <div style="xheight: 100vh; background: #000000;" class="d-flex fd-column ai-center jc-center">
+      
+        <div>
+          <img src="/assets/walking-dragon-legend-myth-folklore-svgrepo-com.svg" width="300" />
+          <h1 class="mq xc-white fs-4" style="font-family: 'dpcali';">Social-Pique.com</h1>
+        </div>
+    </div>
+  <script>
+  </script>
+  </body>
+</html>

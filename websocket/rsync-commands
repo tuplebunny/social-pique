@@ -1,0 +1,3 @@
+rsync -av /srv/www/chat1/ root@social-pique.com:/srv/www/chat1
+
+rsync -av /srv/www/alpha/ root@social-pique.com:/srv/www/alpha

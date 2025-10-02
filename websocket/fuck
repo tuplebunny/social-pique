@@ -1,0 +1,27 @@
+Supply username to server
+Use php to transmit http data into postgres
+ask postgres to create a 'client'
+return the client-id, etc., to browser
+browser issues connection to websocket
+browser immediately sends identify command with client-id
+if success, allow chatting
+
+
+
+nginx is presently configured to route certain traffic to cowboy, certain traffic to cowboy/websocketc, and some is served via nginx.
+
+let's go ahead for now and rely on nginx for at least 2 reasons:
+
+1. we get to use php to work with HTTP POST data, etc.
+2. easy ssl integration because nginx-certbot
+
+Okay.
+
+Don't use Cowboy to serve anything other than websockets right now.
+
+Install PHP. Install PHP-Postgres adapter. Verify it works.
+
+nginx:
+/       -> php
+/ws     -> cowboy
+/assets -> nginx-static

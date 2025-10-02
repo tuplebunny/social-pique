@@ -1,0 +1,18 @@
+{application, chat1,
+ [{description, "An OTP application"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, {chat1_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    cowboy,
+    epgsql,
+    jsx
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {licenses, ["Apache-2.0"]},
+  {links, []}
+ ]}.
