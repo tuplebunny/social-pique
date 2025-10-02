@@ -1,6 +1,6 @@
 # Social-Pique
 
-## [Social-Pique Alpha Site](https://alpha.social-pique.com/)
+### Play Now: [Social-Pique Alpha Site](https://alpha.social-pique.com/)
 
 ### Enjoy real-time competitive multiplayer gaming.
 
